@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cz.cervenka</groupId>
-    <artifactId>ReservePoint-Reformed-Backend</artifactId>
+    <artifactId>rp-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ReservePoint-Reformed-Backend</name>
     <description>ReservePoint-Reformed-Backend</description>
@@ -56,6 +56,7 @@
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
+            <version>26.7.0</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -74,7 +75,7 @@
         <dependency>
             <groupId>dnsjava</groupId>
             <artifactId>dnsjava</artifactId>
-            <version>3.4.1</version>
+            <version>3.6.0</version>
         </dependency>
 
         <dependency>
@@ -91,7 +92,7 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-impl</artifactId>
-            <version>0.11.5</version>
+            <version>0.12.6</version>
         </dependency>
 
         <dependency>
