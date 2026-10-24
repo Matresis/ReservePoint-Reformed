@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/rp-frontend/src/assets/css/style.css}">
+    <link rel="icon" th:href="@{/rp-frontend/src/assets/img/logo.png}" sizes="32x32" type="image/x-icon">
+    <title>Reservation Confirmed</title>
+</head>
+<body>
+
+<header>
+    <h1 class="site-title">Confirmation</h1>
+    <nav class="nav-bar">
+        <ul class="nav-options">
+            <li><a href="/home">Dashboard</a></li>
+            <li><a href="/reserveForm">Create Reservation</a></li>
+            <li><a href="/reservations">Reservations</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="confirmation">
+        <h1>Reservation Confirmed</h1>
+
+        <strong><p>Thank you, <span th:text="${customer.user.name}"></span>!</p></strong>
+        <p>Your request for reservation has been received.</p>
+
+        <h2>Details</h2>
+        <p>Reservation for: <strong><span th:text="${reservation.service.name}"></span></strong></p>
+        <p>Reservation Created at: <strong><span th:text="${reservation.formattedCreatedAt}"></span></strong></p>
+        <p>Confirmation of reservation has been sent to your email: <strong><span th:text="${reservation.customer.user.email}"></span></strong></p>
+    </div>
+
+    <div class="return-container">
+        <a href="/home" id="return-button" class="button">Back to Home</a>
+    </div>
+</div>
+<script th:src="@{/rp-frontend/src/assets/js/script.js}"></script>
+</body>
+</html>

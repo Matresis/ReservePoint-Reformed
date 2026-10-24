@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/rp-frontend/src/assets/css/style.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" th:href="@{/rp-frontend/src/assets/img/logo.png}" sizes="32x32" type="image/x-icon">
+    <title>Reservations</title>
+</head>
+<body>
+
+<header>
+    <h1 class="site-title">Reservation Manager</h1>
+    <nav class="nav-bar">
+        <ul class="nav-options">
+            <li><a href="/home">Dashboard</a></li>
+            <li><a href="/reserveForm">Create Reservation</a></li>
+            <li><a href="/reservations">Reservations</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="reservations-container">
+    <h1>List of Reservations</h1>
+
+    <button id="filter-button" onclick="toggleFilterForm()">Filter</button>
+
+    <form id="filter-form" action="/reservations" method="get" class="filter-form" style="display: none;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name">
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" placeholder="Surname">
+
+        <label for="date">Created:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="serviceType">Service:</label>
+        <select id="serviceType" name="serviceType">
+            <option value="">Choose a service</option>
+            <th:block th:each="service : ${services}">
+                <option th:value="${service.name}" th:text="${service.name}"></option>
+            </th:block>
+        </select>
+
+        <button type="submit">Apply Filters</button>
+    </form>
+
+    <div class="card-grid">
+        <th:block th:each="reservation : ${reservations}">
+            <a th:href="@{/reservations/{id}(id=${reservation.id})}" class="reservation-card-link">
+                <div class="reservation-card" th:attr="data-status=${reservation.status}">
+                    <div class="card-content">
+                        <h3 th:text="${reservation.customer.user.name + ' ' + reservation.customer.user.surname}"></h3>
+                        <p><strong>Email:</strong> <span th:text="${reservation.customer.user.email}"></span></p>
+                        <p><strong>Phone:</strong> <span th:text="${reservation.customer.phone}"></span></p>
+                        <p><strong>Service:</strong> <span th:text="${reservation.service.name}"></span></p>
+                        <p><strong>Created:</strong> <span th:text="${reservation.formattedCreatedAt}"></span></p>
+                        <p><strong>Status:</strong> <span th:text="${reservation.status}"></span></p>
+                    </div>
+                    <p class="button">View Details</p>
+                </div>
+            </a>
+        </th:block>
+    </div>
+
+    <div class="return-container">
+        <a href="/home" id="return-button" class="button">Back to Home</a>
+    </div>
+</div>
+</body>
+<script th:src="@{/rp-frontend/src/assets/js/filterForm.js}"></script>
+<script th:src="@{/rp-frontend/src/assets/js/script.js}"></script>
+</html>
