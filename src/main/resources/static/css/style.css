@@ -1,0 +1,1015 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    min-height: 70vh;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.nav-bar {
+    margin-top: 10px;
+}
+
+.nav-options {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.nav-options li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-options li a:hover {
+    color: #2196f3; /* Vibrant blue */
+}
+
+.nav-options li a.active-tab {
+    color: #2196f3; /* or whatever highlight color you like */
+    border-bottom: 2px solid #2196f3;
+    font-weight: bold;
+}
+
+.form-container {
+    background-color: white;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-container input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container button {
+    padding: 0.9rem;
+    background-color: #2196f3;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #1976d2;
+}
+
+.form-container a {
+    margin-top: 0;
+    color: #2196f3;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+.form-container a.button:hover {
+    text-decoration: underline;
+}
+
+.form-container .error-message {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.container {
+    max-width: 40%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.2); /* Soft shadow */
+    text-align: center;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.container h1, .container h2 {
+    color: #2c3e50;
+}
+
+.container form {
+    margin: 15px 0;
+}
+
+.container button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 8px 4px 16px 0;
+}
+
+.container button:hover {
+    opacity: 0.9;
+}
+
+/* Page Layout */
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.page-container h1 {
+    color: #2c3e50;
+}
+
+.left-container {
+    flex: 1;
+    margin-right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.2); /* Soft shadow */
+    text-align: left;
+}
+
+.right-container {
+    flex: 0.3; /* Adjust based on how wide you want the button section */
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.2); /* Soft shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-container h1,
+.left-container p {
+    margin-bottom: 15px;
+}
+
+/* Add additional responsiveness if needed */
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column;
+    }
+
+    .left-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .right-container {
+        flex: 1;
+    }
+}
+
+#confirmSection {
+    width: 100%;
+}
+
+#approveButton,
+#approveSection button {
+    background-color: #4caf50;
+}
+
+#rejectButton,
+#rejectSection button,
+#deleteButton,
+#deleteSection button {
+    background-color: #e74c3c;
+}
+
+#addToCalendarForm {
+    width: 100%;
+}
+
+#addToCalendarButton {
+    background-color: #2196f3;
+}
+
+#orderedTime, #status, #notes {
+    margin-top: 5px;
+}
+
+#orderedTimeLabel {
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+input, select, textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#deleteButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #e74c3c; /* Red */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+#deleteButton:hover {
+    background-color: #c0392b;
+}
+
+#saveChangesButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #2196f3; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#saveChangesButton:hover {
+    background-color: #1976d2;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    padding: 15px;
+    background-color: white;
+    color: #333333;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #e74c3c; /* Red */
+}
+
+.home-container {
+    max-width: 99%;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.home-container h1 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.home-container form {
+    margin: 0;
+}
+
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 80px;
+}
+
+.card-button {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Example background images (replace URLs as needed) */
+.reservations {
+    background-image: url('/img/reservations.png'); /* clipboard */
+    background-color: #4caf50;
+}
+
+.reservations:hover {
+    background-color: #0b730f;
+}
+
+.calendar {
+    background-image: url('/img/calendar.png'); /* calendar */
+    background-color: #2196f3;
+}
+
+.calendar:hover {
+    background-color: #115e9b;
+}
+
+.requests {
+    background-image: url('/img/requests.png'); /* envelope */
+    background-color: #ff9800;
+}
+
+.requests:hover {
+    background-color: #af7013;
+}
+
+.reserveForm {
+    background-image: url('/img/form.png'); /* envelope */
+    background-color: #ff9800;
+}
+
+.reserveForm:hover {
+    background-color: #af7013;
+}
+
+.logout {
+    background-image: url('/img/logout.png'); /* logout */
+    background-color: #e74c3c;
+}
+
+.logout:hover {
+    background-color: #ab2a1c;
+}
+
+.reservations-container {
+    max-width: 99%;
+    min-height: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(44, 62, 80, 0.2);
+    text-align: center;
+}
+
+.reservations-container table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.reservations-container h1  {
+    color: #2c3e50;
+}
+
+.confirmation {
+    margin-bottom: 20px;
+}
+
+#filter-button {
+    width: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#filter-button:hover {
+    background-color: #566680;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #f0f2f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.filter-form label {
+    color: #333333;
+    margin-right: 5px;
+}
+
+.filter-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: #333333;
+}
+
+.filter-form button[type="submit"] {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-form button[type="submit"]:hover {
+    background-color: #566680;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+    gap: 20px;
+}
+
+.reservation-card {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.2);
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.reservation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+    background-color: #f9f9f9;
+}
+
+.reservation-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reservation-card-link:hover .reservation-card {
+    text-decoration: none;
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Dynamic Status Styling */
+.reservation-card[data-status="PENDING"] {
+    border-color: #ff9800;
+}
+
+.reservation-card[data-status="APPROVED"] {
+    border-color: #2196f3;
+}
+
+.reservation-card[data-status="CONFIRMED"] {
+    border-color: #4caf50;
+}
+
+.reservation-card[data-status="CANCELED"] {
+    border-color: #e74c3c;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    color: #333333;
+}
+
+.card-content p {
+    margin: 8px 0;
+    color: #555555;
+    font-size: 0.95em;
+}
+
+.reservation-card .button {
+    margin-top: 15px;
+    background-color: #0a8111;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.reservation-card .button:hover {
+    background-color: #005b03;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.2);
+    z-index: 1000;
+}
+
+.popup-content {
+    height: 100%;
+    text-align: center;
+}
+
+.popup-content p {
+    color: #333333;
+}
+
+.popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-content button:first-child {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.popup-content button:last-child {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.popup-content-details button:first-child {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.popup-content-details button:last-child {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#popup-editSection,
+#deleteOptions {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#deleteOptions button {
+    width: 80%;
+}
+
+/* FullCalendar container styling */
+#calendar {
+    margin: 2rem auto;
+    max-width: 98%;
+    background-color: #2c3e50;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 0 10px #000;
+}
+
+/* FullCalendar theme overrides */
+.fc {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.fc-toolbar-title {
+    color: #ffffff;
+}
+
+.fc-button {
+    background-color: #2c2c2c;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.fc-button:hover {
+    background-color: #444;
+}
+
+.fc-event {
+    background-color: #0066cc;
+    border: none;
+    color: #fff;
+}
+
+/* Popup style */
+.popup-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(52, 52, 52, 0.9);
+    z-index: 1000;
+}
+
+.popup-header {
+    border-radius: 20px 20px 0 0;
+}
+
+.popup-content-details {
+    background-color: #f0f0f0;
+    color: #555;
+    border-radius: 23px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 15px #000;
+    text-align: center;
+}
+
+.popup-content-details h2 {
+    margin: 0;
+    color: #f0f0f0;
+}
+
+.popup-content-details p {
+    margin: 0.5rem 0;
+}
+
+.popup-content-details button,
+.popup-content-details .button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.popup-content-details button:hover,
+.popup-content-details .button:hover {
+    background-color: #0b730f;
+}
+
+#reservation-detail-link {
+    margin-bottom: 20px;
+}
+
+.details-container {
+
+}
+
+/* Return button */
+.return-container {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.form-container.return-container {
+    text-align: center;
+    margin: 0;
+}
+
+#return-button.button {
+    background-color: #444;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+#return-button.button:hover {
+    background-color: #666;
+}
+
+.return-button.button {
+    background-color: #444;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.return-button.button:hover {
+    background-color: #666;
+}
+
+/* Delete button */
+.delete-option {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-option:hover {
+    background-color: #cc0000;
+}
+
+/* Requests*/
+.requests-nav-bar {
+    margin-top: 40px;
+}
+
+.requests-nav-options {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+}
+
+.requests-nav-options li a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.requests-nav-options li a:hover {
+    color: #2196f3; /* Vibrant blue */
+}
+
+.requests-nav-options li a.active-tab {
+    color: #2196f3; /* or whatever highlight color you like */
+    border-bottom: 2px solid #2196f3;
+    font-weight: bold;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    table-layout: fixed;
+}
+
+.styled-table th,
+.styled-table td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.btn, .btn-secondary, .btn-danger {
+    padding: 6px 12px;
+    border: none;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #2196f3;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #9f2319;
+}
+
+.section-title {
+    margin-top: 40px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.edit-section {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.hidden-section {
+    display: none;
+}
+
+.edit-section textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.request-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.request-button:hover {
+    background-color: #0b730f;
+}
+
+
+/* General mobile styling */
+@media (max-width: 768px) {
+    /* Make navigation stack vertically on smaller screens */
+    .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-bar li {
+        margin-bottom: 10px;
+    }
+
+    /* Make form inputs and buttons full width */
+    .filter-form input,
+    .filter-form select,
+    .filter-form button {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    /* Stack the filter form and content vertically */
+    .reservations-container {
+        display: block;
+    }
+
+    /* Make card grid responsive */
+    .card-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Adjust the layout of the table inside each section */
+    .styled-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .styled-table th, .styled-table td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    .card-content {
+        padding: 10px;
+    }
+
+    .requests-nav-bar {
+        text-align: center;
+    }
+
+    .requests-nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .requests-nav-bar li {
+        margin-bottom: 10px;
+    }
+
+    /* Make the buttons smaller and more mobile-friendly */
+    .btn, .btn-danger, .button {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .return-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .reservation-card .button {
+        width: 94%;
+    }
+
+    .page-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .right-container {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+}

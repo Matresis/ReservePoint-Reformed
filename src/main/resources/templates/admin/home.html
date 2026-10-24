@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" th:href="@{/img/logo.png}" sizes="32x32" type="image/x-icon">
+    <title>Home</title>
+</head>
+<body>
+
+<header>
+    <h1 class="site-title">Admin Dashboard</h1>
+    <nav class="nav-bar">
+        <ul class="nav-options">
+            <li><a href="/admin">Dashboard</a></li>
+            <li><a href="/admin/reservations">Reservations</a></li>
+            <li><a href="/admin/requests">Requests</a></li>
+            <li><a href="/admin/calendar">Calendar</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="home-container">
+    <h1>Welcome, Admin</h1>
+
+    <div class="button-grid">
+        <form action="/admin/reservations" method="get">
+            <button class="card-button reservations" type="submit">Reservations</button>
+        </form>
+
+        <form action="/admin/calendar" method="get">
+            <button class="card-button calendar" type="submit">Calendar</button>
+        </form>
+
+        <form action="/admin/requests" method="get">
+            <button class="card-button requests" type="submit">Requests</button>
+        </form>
+
+        <form action="/admin/logout" method="post">
+            <button class="card-button logout" type="submit">Log Out</button>
+        </form>
+    </div>
+</div>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>
